@@ -1,0 +1,15 @@
+{
+  "name": "shashindra-profile",
+  "version": "0.1.0",
+  "author": "shashindra",
+  "summary": "This is a profile module",
+  "license": "Apache-2.0",
+  "source": "git@github.com:shashindra6022/puppet-profile.git",
+  "project_page": "https://github.com/shashindra6022/puppet-profile",
+  "issues_url": "https://github.com/shashindra6022/puppet-profile/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
