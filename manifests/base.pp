@@ -21,13 +21,11 @@ class profile::base(
     group   => 'root',
     mode    => '0755',
     content => "
-
     This server is part of Shashindra's test.
 
     SYSTEM INFO:
     ===========
 
-    IPADDRESS        : ${::ipadress} 
     HOSTNAME         : ${::hostname}
     MEMORY           : ${::memory['system']['total']}
     CPU CORES        : ${::processors['count']}
