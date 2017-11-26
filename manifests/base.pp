@@ -14,4 +14,25 @@ class profile::base(
   if $facts['os']['family'] == 'RedHat' {
     include ::profile::selinux
   }
+  
+  file { '/etc/motd':
+    ensure  => 'file',
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0755',
+    content => "
+
+    This server is part of Shashindra's test.
+
+    SYSTEM INFO:
+    ===========
+
+    IPADDRESS        : $::ipadress
+    HOSTNAME         : $facts['networking']['fqdn']
+    MEMORY           : $facts['memory']['system']['total']
+    CPU CORES        : $facts ['processors']['counts']
+    OPERATING SYSTEM : $facts ['operatingsystem']
+   "
+  }
 }
+
