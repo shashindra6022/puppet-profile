@@ -21,15 +21,15 @@ class profile::base(
     group   => 'root',
     mode    => '0755',
     content => "
-    This server is part of Shashindra's test.
+    This server is belong to PAKAYATA.
 
     SYSTEM INFO:
     ===========
 
     HOSTNAME         : ${facts['networking']['fqdn']}
-    MEMORY           : ${::memory['system']['total']}
-    CPU CORES        : ${::processors['count']}
-    OPERATING SYSTEM : ${::operatingsystem}
+    MEMORY           : ${facts['memory']['system']['total']}
+    CPU CORES        : ${facts['processors']['count']}
+    OPERATING SYSTEM : ${facts['operatingsystem']}
    "
   }
 }
