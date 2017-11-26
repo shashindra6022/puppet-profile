@@ -27,11 +27,11 @@ class profile::base(
     SYSTEM INFO:
     ===========
 
-    IPADDRESS        : $::ipadress
-    HOSTNAME         : $facts['networking']['fqdn']
-    MEMORY           : $facts['memory']['system']['total']
-    CPU CORES        : $facts ['processors']['counts']
-    OPERATING SYSTEM : $facts ['operatingsystem']
+    IPADDRESS        : ${::ipadress} 
+    HOSTNAME         : ${::hostname}
+    MEMORY           : ${::memory['system']['total']}
+    CPU CORES        : ${::processors['count']}
+    OPERATING SYSTEM : ${::operatingsystem}
    "
   }
 }
