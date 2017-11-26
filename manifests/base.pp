@@ -26,7 +26,7 @@ class profile::base(
     SYSTEM INFO:
     ===========
 
-    HOSTNAME         : $facts['networking']['fqdn']
+    HOSTNAME         : ${facts['networking']['fqdn']}
     MEMORY           : ${::memory['system']['total']}
     CPU CORES        : ${::processors['count']}
     OPERATING SYSTEM : ${::operatingsystem}
